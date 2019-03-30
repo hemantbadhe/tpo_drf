@@ -1,0 +1,9 @@
+venv/
+.idea/
+__pycache__/
+*.pyc
+tpo/*.pyc
+tpo_drf/*.pyc
+tpo_drf/migrations
+tpo_drf/migrations/*.pyc
+media/*

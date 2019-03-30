@@ -1,0 +1,61 @@
+{% load static from staticfiles %}
+{% load i18n %}
+{%block head%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TPO | Forgot Password</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="icon" type="image/png" href="{% static 'Password_Reset/images/icons/favicon.ico' %}"/> -->
+	<link rel="stylesheet" type="text/css" href="{% static 'Password_Reset//vendor/bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'Password_Reset//fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'Password_Reset/fonts/iconic/css/material-design-iconic-font.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'Password_Reset/vendor/animate/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'Password_Reset/vendor/css-hamburgers/hamburgers.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'Password_Reset/vendor/animsition/css/animsition.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'Password_Reset/vendor/select2/select2.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'Password_Reset/vendor/daterangepicker/daterangepicker.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'Password_Reset/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'Password_Reset/css/main.css' %}">
+	<script src="{% static 'Password_Reset/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'Password_Reset/vendor/animsition/js/animsition.min.js' %}"></script>
+	<script src="{% static 'Password_Reset/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'Password_Reset/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'Password_Reset/vendor/select2/select2.min.js' %}"></script>
+	<script src="{% static 'Password_Reset/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'Password_Reset/vendor/daterangepicker/daterangepicker.js' %}"></script>
+	<script src="{% static 'Password_Reset/vendor/countdowntime/countdowntime.js' %}"></script>
+	<script src="{% static 'Password_Reset/js/main.js' %}"></script>
+</head>
+{%endblock%}
+{% block content %}
+
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100" style="margin-top:-8em;">
+				<center>
+					<span class="login100-form-title p-b-26" style="font-size: 15px">
+						Password recovery mail sent !!
+					</span>
+					<div>
+						<p style="font-size:16px;">{% blocktrans with ago=timestamp|timesince %}An email was sent to <strong>{{ email }}</strong>. Use the link in it to set a new password.{% endblocktrans %}</p>
+					</div>
+				</center>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#id_username_or_email').removeClass('form-control');
+		$('#id_username_or_email').addClass('input100');
+	})
+</script>
+{% endblock %}
+</html>
