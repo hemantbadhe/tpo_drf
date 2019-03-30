@@ -29,4 +29,6 @@ urlpatterns = [
     path('dashboard/', views.dashboard),
     path('send_notification/', views.send_notification),
 
+    path('password/', include('password_reset.urls', namespace='password_reset')),
+
 ]

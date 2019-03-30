@@ -5,7 +5,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('api/', include('tpo_drf.urls')),
-    path('password/', include('password_reset.urls', namespace='password_reset')),
+    # path('password/', include('password_reset.urls', namespace='password_reset')),
     path('admin/', admin.site.urls),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
