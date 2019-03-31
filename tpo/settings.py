@@ -4,7 +4,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = '6#$7d)j)$jkntcp9b4n#y%b_6s$u_@n$3h=1eb+aao2mfkpj!b'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -37,8 +37,8 @@ MIDDLEWARE = [
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = '<>'
-EMAIL_HOST_PASSWORD = '<>'
+EMAIL_HOST_USER = 'hemantbadhe1305@gmail.com'
+EMAIL_HOST_PASSWORD = 'hemantbadhe@123'
 
 ROOT_URLCONF = 'tpo.urls'
 
@@ -119,8 +119,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+# PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+# STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
